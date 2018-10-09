@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function verifica(valor){
+	var num=0;
+	var suma=0;
+	for (var i = 0; i < 12 ; i++) {
+		document.write("		");
+		if ((i)%2==0) {
+			suma+=parseInt((valor.toString()).substring(i,i+1));
+		}else{
+			suma+=(parseInt((valor.toString()).substring(i,i+1)))*3;
+		}
+	}
+
+	var numver=(((Math.trunc(suma/10))+1)*10)-suma;
+	document.write("Suma total: "+suma+"<br>"+" Numero resultante: "+numver+"<br>"+" Digito de comporbacion: "+valor.substring(12,13)+"<br>");
+
+	if ((valor.substring(12,13))==numver) {
+		document.write("Si es valido");
+	}else{
+		document.write("No es valido");
+	}
+}
+
+verifica("8425623500126");
+	</script>
+</head>
+<body>
+
+</body>
+</html>
